@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1200.0" style="-fx-background-color: #0A146E; -fx-border-color: #DADADA;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.technokid.CurrencyConverter.Controller">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="35.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" rotate="-35.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="46.0">
+         <image>
+            <Image url="@Images/logo_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Images/back.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="451.0" layoutY="151.0" prefHeight="410.0" prefWidth="1200.0" text="Currency Converter" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="3.0" layoutY="414.0" prefHeight="339.0" prefWidth="1196.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+         <children>
+            <Line endX="-4.0" fill="BLACK" layoutX="942.0" layoutY="414.0" startX="-907.0" stroke="#d7d7d7" strokeWidth="0.5" AnchorPane.bottomAnchor="25.5" AnchorPane.leftAnchor="34.5" />
+            <HBox alignment="CENTER_RIGHT" layoutX="986.0" layoutY="398.0" prefHeight="30.0" prefWidth="261.0" spacing="5.0" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="100.0" text="Data used from" />
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink prefHeight="35.0" prefWidth="100.0" text="www.xe.com" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="loader" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/loader.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+      <AnchorPane layoutX="152.0" layoutY="255.0" prefHeight="343.0" prefWidth="898.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20px;" AnchorPane.bottomAnchor="254.0" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="152.0" AnchorPane.topAnchor="255.0">
+         <effect>
+            <DropShadow height="44.45" radius="18.060000000000002" spread="0.1" width="29.79">
+               <color>
+                  <Color opacity="0.350649356842041" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <HBox alignment="CENTER" layoutX="48.0" layoutY="58.0" prefHeight="156.0" prefWidth="894.0" spacing="20.0" AnchorPane.bottomAnchor="183.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="184.0" prefWidth="269.0" spacing="5.0">
+                     <children>
+                        <Label text="Amount">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inpAmount" prefHeight="35.0" prefWidth="150.0" promptText="Enter Amount" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px; -fx-border-color: #E5E5E5;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="184.0" prefWidth="269.0" spacing="5.0">
+                     <children>
+                        <Label text="From">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="drpFrom" prefHeight="45.0" prefWidth="230.0" promptText="Select From Currency" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px; -fx-border-color: #E5E5E5;" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="180.0" prefWidth="87.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="28.0" />
+                        <Button fx:id="btnSwap" mnemonicParsing="false" onAction="#convert" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #E5E5E5; -fx-background-radius: 100px; -fx-border-radius: 100px;">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/replace.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="184.0" prefWidth="269.0" spacing="5.0">
+                     <children>
+                        <Label text="To">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="drpTo" prefHeight="45.0" prefWidth="250.0" promptText="Select To Currency" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px; -fx-border-color: #E5E5E5;" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="btnConvert" layoutX="748.0" layoutY="253.0" mnemonicParsing="false" onAction="#convert" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #0071EB; -fx-background-radius: 10px;" text="Convert" textFill="WHITE" AnchorPane.bottomAnchor="47.0" AnchorPane.rightAnchor="46.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <VBox fx:id="outVbox" alignment="CENTER_LEFT" layoutY="170.0" prefHeight="122.0" prefWidth="580.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Label fx:id="fromOut" text="1 USD =">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="toOut" text="1.00 Indian Rupee">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label prefWidth="28.0" />
+                  <Text fx:id="exchRate" fill="#b9b9b9" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="514.6708984375">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="55.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="14.0" layoutY="344.0" opacity="0.5" prefHeight="45.0" prefWidth="56.0" AnchorPane.bottomAnchor="461.0" AnchorPane.leftAnchor="14.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="3" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="1130.0" layoutY="14.0" opacity="0.5" prefHeight="45.0" prefWidth="56.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="3" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Circle fill="WHITE" radius="4.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
